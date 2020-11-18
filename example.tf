@@ -1,3 +1,13 @@
+provider "aws" {
+    profile     = "default"
+    region      = "us-west-1"
+}
+
+# resource "aws_instance" "example" {
+#     ami             = "ami-2757f631"
+#     instance_type   = "t2.micro"
+# }
+
 resource "aws_elasticache_cluster" "example" {
   cluster_id           = "cluster-example"
   engine               = "redis"
