@@ -4,5 +4,9 @@ provider "aws" {
 }
 
 # resource "aws_cognito_user_pool" "pool" {
-#     name = "mypool"
+#     name = "tf-pool"
+
+#     lambda_config {
+#         pre_token_generation = "arn:aws:lambda:eu-west-1:970541181154:function:preTokenGenerationLambda"
+#     }
 # }
